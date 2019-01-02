@@ -1,0 +1,16 @@
+{
+  "name": "anime2",
+  "version": "1.0.0",
+  "description": "Javascript animations",
+  "main": "main.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Sean Swan",
+  "license": "ISC",
+  "devDependencies": {
+    "animejs": "^2.2.0",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {}
+}

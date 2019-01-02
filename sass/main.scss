@@ -1,0 +1,369 @@
+//Variables
+$color-primary:#8d43e2ee;
+$color-primary-light:#bad4ebea;
+$color-primary-dark:#2a0752c5;
+$color-swizzle-main: #000f5c;
+
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: black;
+
+$color-grey-dark-2: rgb(62, 62, 62);
+
+$color-secondary-dark: rgb(13, 1, 30);
+
+$color-secondary-light: #9c78c5c5;
+$color-secondary-dark: #28d828c5;
+
+$color-tertiary-light: #d0ff00c5;
+$color-tertiary-dark: #ffd364c5;
+
+$color-grey-light: #f7f7f7;
+$color-aqua-green: rgba(106, 252, 203, 0.884);
+$color-aqua-green-2: rgba(11, 189, 171, 0.925);
+$color-hot-pink: rgba(248, 2, 174, 0.925);
+$color-hot-pink-2: rgb(255, 148, 223);
+
+//FONT
+$default-font-size: 1.6rem;
+
+
+//grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+
+//grid & row
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+.row {
+     max-width: $grid-width;
+    //background-color: rgb(17, 17, 114);
+    margin: 0 auto;
+    margin-bottom: $gutter-vertical;
+    &:not(:last-child) {
+        // placing margin on everything but the last child "&:not()
+        margin-bottom: $gutter-vertical;
+    }
+  
+  @include clearfix;
+  
+  [class^="col-"] {                    // the attribute selector [].   ^ start with col- $ ends with col- * all col- picking all elements that start with col-
+    //background-color: rgb(30, 37, 35);
+    float: left;
+    &:not(:last-child) {
+        // using the not psedo class to exclude the last child element from margin.
+        margin-right: $gutter-horizontal;
+    }
+  }
+  
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+  
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);    // 100% minus 2x gutter-horizontal divided by 3. 
+    }
+    
+    .col-2-of-3 {
+        width: calc(2 *((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});  // 2 times the width of the single 1 of 3 column "1-of-3" we multiplyed by 2 and then add the gutter horizontal notice the extra () brackets nedded in order to wrap
+    }
+  
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);  // was -3  / 4
+       
+    }
+  
+    .col-2-of-4 {
+        width: calc(2 *((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});  
+    }
+  
+    .col-3-of-4 {
+        width: calc(3 *((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});  // we multipled by 3 now plus 2 times the gutter horizontal
+    }
+  }
+
+
+
+//Mixins
+
+
+
+
+// clearing both floats it gave me the space needed betweet the rows gives your row height section 5 lecture 34
+
+
+// MEDIA QUERY MANAGER
+
+// 1em = 16px
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 600px) { @content };  //600px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 900px) { @content };  //900px
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 1200px) { @content }; //1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media (max-width: 1800px) { @content }; //1800px
+    }
+
+}
+
+//Utilities
+
+.u-center-text { text-align: center;}
+.u-margin-bottom-huge { margin-bottom: 10rem;}
+.u-margin-bottom-big {margin-bottom: 8rem;}
+.u-margin-bottom-medium {margin-bottom: 4rem;}
+.u-margin-bottom-small {margin-bottom: 1.5rem;}
+.u-margin-top-big { margin-top: 8rem;}
+.u-margin-top-huge { margin-top: 10rem;}
+
+
+html {
+    font-size: 62.5%;      // changed font to 10 / 16px = 62.5% in order to allow people to zoom in and for mobile application development.
+                           //  1 rem = 10 pixels. changed everything but the
+    *,
+    *::after,
+    *::before {
+    
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;      // best practice set box sizing: inherit to all elements
+    }
+    }
+    
+    body {
+        
+        box-sizing: border-box;         //box-sizing border box is then inherited to all elements above
+    }
+
+    @mixin clearfix {
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    
+    // clearing both floats it gave me the space needed betweet the rows gives your row height section 5 lecture 34
+    
+    @mixin absCenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#boxes {
+  position: relative;
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.4rem;
+  padding: 2.5em;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: transform 0.3s;
+  display: inline-block;
+  margin: auto;
+  &__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
+
+
+#btns {
+  padding: 20px;
+  background: #f4f4f4;
+  margin-bottom: 20px;
+}
+
+#btns button {
+  background: #fff;
+  padding: 5px 10px;
+  border: 0;
+}
+
+#btns .fa {
+  font-size: 30px;
+}
+
+#btns .fa-play-circle {
+  color: green;
+}
+
+#btns .fa-pause-circle {
+  color: red;
+}
+
+
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 4ppx;
+  display: inline-block;
+}
+
+.red {background-color: red}
+.blue {background-color: blue}
+.green {background-color: green}
+.yellow {background-color: yellow}
+
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      #0767acc5,
+      rgba(73, 3, 113, 0.884)
+    ),
+    url(assets/sean.jpg);
+  background-size: cover;
+  margin-top: -11rem;
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(
+      7deg
+    ); // its supposed to set the tiles in the correct tilt but its not
+  }
+}
+.feature-box {
+  position: relative;
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.4rem;
+  padding: 2.5em;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: transform 0.3s;
+  display: inline-block;
+  margin: auto;
+  &__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
+
+
+
+
+
+//slideviwer-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+.slider-container {
+  max-width: 70rem;
+  margin: auto;
+  border: #fff solid 3px;
+  background: #fff;
+}
+
+.main-img img,
+.imgs img {
+  max-width: 100%;
+  
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+  
+  
+}
+
+/* Fade in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
