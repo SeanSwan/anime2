@@ -1,5 +1,5 @@
 var playPause = anime({
-  targets: 'div.feature.box',
+  targets: 'div.box',
   translateY: [
   { value: 200, duration: 500 },
   { value: 0, duration: 800 }
@@ -16,9 +16,9 @@ var playPause = anime({
   loop: true,
 });
 
-document.querySelector('#feature-box .play').onclick =
+document.querySelector('#boxes .play').onclick =
 playPause.play;
-document.querySelector('#feature-box .pause').onclick =
+document.querySelector('#boxes .pause').onclick =
 playPause.pause;
 
 /*anime({

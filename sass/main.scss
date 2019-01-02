@@ -458,3 +458,24 @@ html {
   opacity: 0;
 }
 
+//ANIMECOMPLEX-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.animecomplex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin: 10px;
+}
+.box-shadow {
+  background-color: transparent;
+}
+.clip-path {
+  border-radius: 0;
+}
