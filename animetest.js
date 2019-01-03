@@ -6,7 +6,7 @@ var pathEls = document.querySelectorAll('path');
     anime({
       targets: pathEl,
       strokeDashoffset: [offset, 0],
-      duration: anime.random(1000, 1000),
+      duration: anime.random(5000, 9000),
       delay: anime.random(0, 500),
       loop: true,
       direction: 'alternate',

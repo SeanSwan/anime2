@@ -1,4 +1,4 @@
-var boxShadow = anime2({
+var boxShadow = anime({
   targets: '.box-shadow',
   boxShadow: [
     {value: ['10px -10px 10px 0 currentColor', '10px 10px 20px 0 currentColor']},
@@ -9,7 +9,7 @@ var boxShadow = anime2({
   loop: true,
   easing: 'linear'
 });
-var unitLess = anime2({
+var unitLess = anime({
 
   targets: '.unit-less',
   borderRadius: 10,
@@ -17,42 +17,42 @@ var unitLess = anime2({
   direction: 'alternate',
   easing: 'linear'
 });
-var specifiedUnit = anime2({
+var specifiedUnit = anime({
   targets: '.specified-unit',
   borderRadius: ['0px', '50px'],
   loop: true,
   direction: 'alternate',
   easing: 'linear'
 });
-var filter = anime2({
+var filter = anime({
   targets: '.filter',
   filter: ["blur(20px)", "blur(0px)"],
   loop: true,
   direction: 'alternate',
   easing: 'linear'
 });
-var rgba = anime2({
+var rgba = anime({
   targets: '.rgba',
   backgroundColor: ['rgba(255,100,50,1)', 'rgba(255,100,50,.0)'],
   loop: true,
   direction: 'alternate',
   easing: 'linear'
 });
-var calc = anime2({
+var calc = anime({
   targets: '.calc',
   height: ['calc(25% - 100px)', 'calc(25% - 0px)'],
   loop: true,
   direction: 'alternate',
   easing: 'linear'
 });
-var zeroValue = anime2({
+var zeroValue = anime({
   targets: '.zero-value',
   scale: 0,
   loop: true,
   direction: 'alternate',
   easing: 'linear'
 });
-var roundValue = anime2({
+var roundValue = anime({
   targets: '.round-value',
   translateY: 100,
   loop: true,
@@ -60,7 +60,7 @@ var roundValue = anime2({
   direction: 'alternate',
   easing: 'linear'
 });
-var clipPath = anime2({
+var clipPath = anime({
   targets: '.clip-path',
   clipPath: ['circle(0px at center)', 'circle(100px at center)'],
   loop: true,
