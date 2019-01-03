@@ -358,10 +358,10 @@ html {
 
 
 
-/*ANIMETEST--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*ANIMETEST2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
-.animetest {
+.animetest2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -372,14 +372,107 @@ html {
 
 }
 
-.anim1, .anim1 svg {
+.anim2, .anim2 svg {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.anim1 path {
+.anim2 path {
   stroke-width: 2;
+}
+//-ANIMATEST----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.animetest {
+  display: grid;
+          
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+max-width: 95%;
+margin: 1%;
+grid-gap: 20px;
+padding: 10px 10px 10px 10px;
+
+}
+
+.anim, .anim svg {
+  position: absolute;
+  width: 100%;
+  
+}
+
+.anim path {
+  stroke-width: 2;
+}
+
+
+.animetest {
+  
+
+  &_swizmation {
+      width: 55%;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+      border-radius: 2px;
+      position: absolute;
+      z-index: 10;
+      transition: all .2s;
+      outline-offset: 2rem;
+
+      &#S {            //S
+          left: 13%;
+          top: -60rem;  
+      }
+      &#W {
+          left: 40%;  //W
+          top: -4rem;
+      }
+      &#I {         //I
+          left: 40%;
+          top: 10rem;
+      }
+      &#Z {         //Z
+          left: 0%;  
+          top: 21rem;
+      }
+
+      &#Z {         //Z
+          left: 40%;  
+          top: 30rem;
+      }
+
+      &#L {         //L
+          left: -5%;  
+          top: 35rem;
+      }
+      &#E {         //E
+          left: -5%;  
+          top: 35rem;
+      }
+      &#_ {         //_
+          left: -5%;  
+          top: 35rem;
+      }
+      &#T {         //T
+          left: -5%;  
+          top: 35rem;
+      }
+      &#V {         //V
+          left: -5%;  
+          top: 35rem;
+      }
+      
+
+      &:hover {
+          outline: 1.5rem solid $color-primary-dark;
+          transform: scale(1.05);
+          box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+          z-index: 20;
+      }
+  }
+
+  &:hover &__photo:not(:hover) {      // allows all photos not being hovered to scale down in size a bit. the "not is the keyword that allows it.
+      transform: scale(.9);
+
+  }
 }
 
 

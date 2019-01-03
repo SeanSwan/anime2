@@ -172,8 +172,8 @@ body {
   opacity: 0;
   animation: fadeIn 0.5s ease-in 1 forwards; }
 
-/*ANIMETEST--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.animetest {
+/*ANIMETEST2--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.animetest2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,13 +182,75 @@ body {
   width: 100%;
   height: 100%; }
 
-.anim1, .anim1 svg {
+.anim2, .anim2 svg {
   position: relative;
   width: 100%;
   height: 100%; }
 
-.anim1 path {
+.anim2 path {
   stroke-width: 2; }
+
+.animetest {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 95%;
+  margin: 1%;
+  grid-gap: 20px;
+  padding: 10px 10px 10px 10px; }
+
+.anim, .anim svg {
+  position: absolute;
+  width: 100%; }
+
+.anim path {
+  stroke-width: 2; }
+
+.animetest_swizmation {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  transition: all .2s;
+  outline-offset: 2rem; }
+  .animetest_swizmation#S {
+    left: 13%;
+    top: -60rem; }
+  .animetest_swizmation#W {
+    left: 40%;
+    top: -4rem; }
+  .animetest_swizmation#I {
+    left: 40%;
+    top: 10rem; }
+  .animetest_swizmation#Z {
+    left: 0%;
+    top: 21rem; }
+  .animetest_swizmation#Z {
+    left: 40%;
+    top: 30rem; }
+  .animetest_swizmation#L {
+    left: -5%;
+    top: 35rem; }
+  .animetest_swizmation#E {
+    left: -5%;
+    top: 35rem; }
+  .animetest_swizmation#_ {
+    left: -5%;
+    top: 35rem; }
+  .animetest_swizmation#T {
+    left: -5%;
+    top: 35rem; }
+  .animetest_swizmation#V {
+    left: -5%;
+    top: 35rem; }
+  .animetest_swizmation:hover {
+    outline: 1.5rem solid #2a0752c5;
+    transform: scale(1.05);
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    z-index: 20; }
+
+.animetest:hover .animetest__photo:not(:hover) {
+  transform: scale(0.9); }
 
 .animetext {
   opacity: 1;
