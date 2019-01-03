@@ -23,17 +23,17 @@
       
       
 
-     <!--POLYGON TEST------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+     <!--POLYGON TEST--my s--------M 700 200 Q 700 150 650 150 Q 600 150 600 150 Q 550 150 550 200 Q 550 250 550 250 A 50 50 0 1 1 650 500 Q 650 300 700 400 Q 700 400 700 400 Q 700 450 700 450 Q 700 500 650 500 Q 600 500 550 500 Q 500 500 500 400 L 800 350 Q 800 350 750 350 L 700 350 C 700 350 700 400 700 250 L 800 250 L 750 250 L 750 250 A 50 50 0 1 1 750 250 C 800 300 800 300 800 350 L 750 300 L 800 350 C 800 350 825 300 800 350 L 750 300 L 750 350 L 750 350 ----------------->
       
-      <div id="polygon">
-      <svg width="128" height="128" viewBox="0 0 128 128">
+      <div class="polygon">
+      <svg class="polygon">
         <polygon points="64 68.73508918222262 8.574 99.9935923731656 63.35810017508558 67.62284396863708 64 3.993592373165592 64.64189982491442 67.62284396863708 119.426 99.9935923731656"></polygon>
       </svg>
       </div>
 
-
-
-
+      <svg class="polygon">
+      <g xmlns="http://www.w3.org/2000/svg" style="fill:khaki; stroke:black; vector-effect:non-scaling-stroke;stroke-width:1px;" id="e2_shape" transform="matrix(0.710089 0 0 0.710089 39.2315 57.0987)"><path d="M14.287-0.139c-8.871 0-14.613 5.909-14.613 13.682 0 7.564 5.533 13.661 14.286 13.661 9.184 0 14.731-6.097 14.731-13.661-0.181-7.772-5.547-13.682-14.405-13.682z"/><path d="M0.37 38.014h27.377v88.186h-27.377v-88.186z"/><path d="M96.278 36.074c-14.765 0-23.622 8.461-27.238 14.273h-0.501l-1.308-12.333h-23.802c0.375 7.939 0.757 17.129 0.757 28.169v60.030h27.371v-50.847c0-2.495 0.16-5.026 0.924-6.883 1.926-5.046 6.501-10.226 14.051-10.226 9.927 0 13.862 7.709 13.862 19.104v48.852h27.433v-52.085c-0.001-25.958-13.6-38.055-31.55-38.055z"/></g>
+        </svg>
 
       <!--SECTION FEATURERS---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
       <section class="section-features">
@@ -192,8 +192,8 @@
   <!---Testing new animation-->
 
 <section class="animetest">
-  <div class="anim">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800"><g fill="none" fill-rule="evenodd">
+  <div class="anim1">
+    <svg class="animetest" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800"><g fill="none" fill-rule="evenodd">
       <path stroke="#31B495" d="M781.02 488.77v69.78c0 1.08-.88 1.96-1.97 1.96l-135.12-.04c-1.09 0-2.6.62-3.38 1.39l-39.23 38.96a5.52 5.52 0 0 1-3.37 1.4h-75.38a1.97 1.97 0 0 1-1.97-1.97v-33.5"/>
       <path stroke="#F4D21F" d="M674.88 355.57l45.54-45.24a5.42 5.42 0 0 0 1.39-3.35l-.06-10.38c0-1.08-.63-2.58-1.4-3.35l-43.38-43.07a1.94 1.94 0 0 1 0-2.77l82.83-82.25a5.52 5.52 0 0 1 3.37-1.4l44.94.1c1.08 0 2.6-.62 3.37-1.37L952.5 22.65"/>
       <path stroke="#1AACA8" d="M507-76.68v265.47a4 4 0 0 0 4 3.99H566c1.08 0 1.97.88 1.97 1.96v147.5c0 1.08-.63 2.59-1.4 3.35l-47.9 47.4a5.45 5.45 0 0 0-1.4 3.34c0 2.25.64 3.76 1.4 4.53l53.82 53.26c.77.76 1.76 1.39 2.19 1.39.43 0 .79.88.79 1.96v70.17c0 1.07-.89 1.96-1.97 1.96l-85.81-.04c-1.09 0-2.6.62-3.38 1.39l-1.55 1.54a5.52 5.52 0 0 1-3.38 1.4h-9.29"/>
@@ -371,12 +371,82 @@
         <div class="clip-path item color-06"></div>
     </div>
 
+
+
+
+    <!--ANIMEEASE------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    <div class="easings">
+        <div class="output">
+          <div class="visualizer-wrapper grid">
+            <div class="axis x"></div>
+            <div class="axis y"></div>
+            <div class="visualizer">
+              <div class="ball" style="transform: translateY(100px) scale(0)"></div>
+              <svg viewBox="0 0 100 100">
+                <pathease class="curve"/>  <!--path makees other animations default color this path delete ease to revert to that-->
+              </svg>
+            </div>
+          </div>
+          <div class="value grid"></div>
+        </div>
+        <div class="options">
+          <label>Ease In</label>
+          <button class="active" value="0.550, 0.085, 0.680, 0.530" name="easeInQuad" >Quad</button>
+          <button value="0.550, 0.055, 0.675, 0.190" name="easeInCubic" >Cubic</button>
+          <button value="0.895, 0.030, 0.685, 0.220" name="easeInQuart" >Quart</button>
+          <button value="0.755, 0.050, 0.855, 0.060" name="easeInQuint" >Quint</button>
+          <button value="0.470, 0.000, 0.745, 0.715" name="easeInSine" >Sine</button>
+          <button value="0.950, 0.050, 0.795, 0.035" name="easeInExpo" >Expo</button>
+          <button value="0.600, 0.040, 0.980, 0.335" name="easeInCirc" >Circ</button>
+          <button value="0.600, -0.280, 0.735, 0.045" name="easeInBack" >Back</button>
+          <label>Ease Out</label>
+          <button value="0.250, 0.460, 0.450, 0.940" name="easeOutQuad" >Quad</button>
+          <button value="0.215, 0.610, 0.355, 1.000" name="easeOutCubic" >Cubic</button>
+          <button value="0.165, 0.840, 0.440, 1.000" name="easeOutQuart" >Quart</button>
+          <button value="0.230, 1.000, 0.320, 1.000" name="easeOutQuint" >Quint</button>
+          <button value="0.390, 0.575, 0.565, 1.000" name="easeOutSine" >Sine</button>
+          <button value="0.190, 1.000, 0.220, 1.000" name="easeOutExpo" >Expo</button>
+          <button value="0.075, 0.820, 0.165, 1.000" name="easeOutCirc" >Circ</button>
+          <button value="0.175, 0.885, 0.320, 1.275" name="easeOutBack" >Back</button>
+          <label>Ease In Out</label>
+          <button value="0.455, 0.030, 0.515, 0.955" name="easeInOutQuad" >Quad</button>
+          <button value="0.645, 0.045, 0.355, 1.000" name="easeInOutCubic" >Cubic</button>
+          <button value="0.770, 0.000, 0.175, 1.000" name="easeInOutQuart" >Quart</button>
+          <button value="0.860, 0.000, 0.070, 1.000" name="easeInOutQuint" >Quint</button>
+          <button value="0.445, 0.050, 0.550, 0.950" name="easeInOutSine" >Sine</button>
+          <button value="1.000, 0.000, 0.000, 1.000" name="easeInOutExpo" >Expo</button>
+          <button value="0.785, 0.135, 0.150, 0.860" name="easeInOutCirc" >Circ</button>
+          <button value="0.680, -0.550, 0.265, 1.550" name="easeInOutBack" >Back</button>
+        </div>
+      </div>
+
+      <!--ANIMESTAG-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <!--<div class="wrapper"></div>-->
+  
+   <!--SVG-->
+   <div class="section-features">
+   <div class="anim">
+      <div class="item"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+        <g fill="none" fill-rule="evenodd" stroke-width="2">
+          <line class="line-1" stroke="#F96F82" x1="51.5" x2="149.5" y1="51.5" y2="149.5" stroke-linecap="square"/>
+          <line class="line-2s" stroke="#F96F82" x1="149.5" x2="51.5" y1="51.5" y2="149.5" stroke-linecap="square"/>
+          <circle cx="300" cy="100" r="50" stroke="#FED28B"/>
+          <polygon stroke="#D1FA9E" points="500 130.381 464.772 149 471.5 109.563 443 81.634 482.386 75.881 500 40 517.614 75.881 557 81.634 528.5 109.563 535.228 149"/>
+          <polyline stroke="#7BE6D6" points="63.053 343 43 281.815 95.5 244 95.5 244 148 281.815 127.947 343"/>
+          <path class="path" stroke="#4E7EFC" d="M250 300a50 50 0 0 1 100 0v25h-25v-25a25 25 0 1 0-25 25v25a50 50 0 0 1-50-50z"/>
+          <rect width="98" height="98" x="451" y="251" stroke="#C987FE" rx="25"/>
+        </g>
+      </svg>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
   <script src="main.js"></script>
   <script src="slider.js"></script>
   <script src="animetest.js"></script>
   <script src="animetext.js"></script>
   <script src="animecomplex.js"></script>
-
+  <script src="animeease.js"></script>
+  <!--<script src="animestag.js"></script>-->
   </body>
 </html>
